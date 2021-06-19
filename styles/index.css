@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- HEADER --- */
+
+.header {
+  background: url("../assets/imagen4.png") no-repeat top fixed;
+  background-size: 100% 728px;
+  height: 728px;
+}
+
+.header__welcome {
+  margin: 248px auto;
+}
+
+.welcome__title {
+  text-align: center;
+  color: #fafafa;
+  text-shadow: 0.1em 0.1em 0.1em #dbdbdb50;
+  font-family: "Montserrat";
+  font-size: 48px;
+}
+
+/* --- ABOUT ME --- */
+
+.about-me {
+  background-color: #141414;
+  color: #fafafa;
+  height: 538px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-me__img {
+  display: none;
+}
+
+.about-me__title {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.about-me__content {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
