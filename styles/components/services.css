@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- SERVICES --- */
+
+.services {
+  color: var(--casi-negro);
+  padding: 30px 30px;
+  height: auto;
+  min-height: 700px;
+  color: #1b1b1b;
+  background: url("../../assets/macbook-2617705_1280.png") no-repeat top fixed;
+  background-size: 100% 100%;
+}
+.services__title {
+  font-family: "Montserrat";
+  text-shadow: 0.1em 0.1em 0.1em #dbdbdb50;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+.services__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media (min-width: 769px) {
+  .services__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.services__item {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 1em 1em 1em var(#dbdbdb);
+  border: 0.02px solid #00000010;
+  padding: 15px;
+  margin: 20px;
+}
+
+@media (min-width: 769px) {
+  .services__item {
+    max-width: 350px;
+  }
+}
+.services__item-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+.services__item-content {
+  font-weight: 400;
+  font-size: 16px;
+}

@@ -97,12 +97,9 @@ function navbar() {
     <a href="./contact.html" class="navbar__links-item">Contacto</a>
   </nav>
   </div>
-    <div class="header__welcome">
-    <h1 class="welcome__title">
-      Hola
-      <br />
-      Soy Marcos
-    </h1>
+  
+  <div class="header__welcome">
+    <h1 class="welcome__title">Hola<br>Soy Marcos</h1>
   </div>
 `;
 }

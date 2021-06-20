@@ -1,7 +1,7 @@
 (function () {
   cloneEl(navbar(), ".header");
-  document.querySelector(".welcome__title").textContent = "Contacto";
   cloneEl(contact(), ".contactSection");
+  document.querySelector(".contact__title").textContent= "Contacto"
   cloneEl(footer(), ".footer");
   burgerDisplay();
 })();

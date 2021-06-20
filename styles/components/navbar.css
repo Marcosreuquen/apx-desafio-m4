@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 .header {
-  background: url("../assets/imagen4.png") no-repeat top fixed;
+  background: url("../../assets/stars.png") no-repeat top fixed;
   background-size: 100% 728px;
   height: 654px;
 }
@@ -28,6 +28,11 @@ body {
 .navbar__burger:hover {
   cursor: pointer;
 }
+@media (min-width: 768px){
+  .navbar__burger{
+    display: none;
+  }
+}
 
 .navbar__links {
   position: absolute;
@@ -43,6 +48,15 @@ body {
   align-items: center;
   z-index: 2;
 }
+@media (min-width: 768px){
+  .navbar__links{
+    display: flex;
+    position: initial;
+    background-color: transparent;
+    flex-direction: row;
+    width: 50%;
+  }
+}
 .navbar__links-item {
   text-decoration: none;
   color: #ffffff;
@@ -50,7 +64,13 @@ body {
   font-weight: bold;
   font-size: 48px;
 }
-
+@media (min-width: 768px){
+  .navbar__links-item{
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
 .header__welcome {
   margin: 248px auto;
 }
