@@ -6,8 +6,6 @@ body {
   padding: 0;
 }
 .header {
-  background: url("../../assets/stars.png") no-repeat top fixed;
-  background-size: 100% 728px;
   height: 654px;
 }
 .header__navbar {
@@ -55,6 +53,10 @@ body {
     background-color: transparent;
     flex-direction: row;
     width: 50%;
+  }
+  .navbar__links-item:hover {
+    border-bottom: 2px solid #FAFAFA70;
+
   }
 }
 .navbar__links-item {

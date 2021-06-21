@@ -1,10 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
 
 /* --- SERVICES --- */
 
@@ -13,13 +6,12 @@ body {
   padding: 30px 30px;
   height: auto;
   min-height: 700px;
-  color: #1b1b1b;
-  background: url("../../assets/macbook-2617705_1280.png") no-repeat top fixed;
-  background-size: 100% 100%;
+  color: #FAFAFA;
+
 }
 .services__title {
   font-family: "Montserrat";
-  text-shadow: 0.1em 0.1em 0.1em #dbdbdb50;
+  text-shadow: 0.5px 0.5px #dbdbdb50;
   font-size: 48px;
   font-weight: bold;
   text-align: center;
@@ -42,7 +34,7 @@ body {
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   border-radius: 50px;
-  box-shadow: 1em 1em 1em var(#dbdbdb);
+  box-shadow: 1em 1em 1em #dbdbdb10;
   border: 0.02px solid #00000010;
   padding: 15px;
   margin: 20px;
