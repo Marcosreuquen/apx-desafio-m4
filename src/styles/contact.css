@@ -1,0 +1,24 @@
+.header {
+  background: none;
+  height: fit-content;
+}
+
+.contactSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+.contact {
+  background-color: transparent;
+}
+
+body {
+  background: rgb(77, 74, 108);
+  background: linear-gradient(
+    180deg,
+    rgba(77, 74, 108, 1) 0%,
+    rgba(81, 81, 133, 1) 41%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}

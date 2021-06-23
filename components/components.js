@@ -45,8 +45,8 @@ function contact() {
   return `
   <div class="contact">
   <h2 class="contact__title">Escribime</h2>
-  <div class="contact__form">
-    <label for="name" class="form__label-name form__label">
+  <form class="contact__form">
+    <label class="form__label-name form__label">
       <span>NOMBRE</span>
       <input
         type="text"
@@ -54,7 +54,7 @@ function contact() {
         class="form__input form__input-name"
       />
     </label>
-    <label for="email" class="form__label-email form__label">
+    <label class="form__label-email form__label">
       <span>EMAIL</span>
       <input
         type="email"
@@ -62,7 +62,7 @@ function contact() {
         class="form__input form__input-email"
       />
     </label>
-    <label for="message" class="form__label-message form__label">
+    <label class="form__label-message form__label">
       <span>MENSAJE</span>
       <textarea
         name="message"
@@ -73,7 +73,7 @@ function contact() {
       ></textarea>
     </label>
     <button class="form__button-submit">Enviar</button>
-  </div>
+  </form>
 </div>`;
 }
 
@@ -129,9 +129,11 @@ function burgerDisplay() {
   const ventanaEl = document.querySelector(".navbar__links");
 
   burgerEl.addEventListener("click", () => {
+    document.querySelector(".header__navbar").style = "position: initial";
     ventanaEl.style.display = "flex";
   });
   ventanaEl.addEventListener("click", () => {
+    document.querySelector(".header__navbar").style = "";
     ventanaEl.style.display = "";
   });
 }

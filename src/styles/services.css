@@ -1,0 +1,37 @@
+.header {
+  background: none;
+  height: auto;
+}
+
+.services {
+  background-color: transparent;
+  color: #f5f5f5;
+  text-shadow: 0.5px 0.5px #000;
+}
+
+.services__title {
+  display: none;
+}
+
+.header__title {
+  color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 42px;
+  padding-left: 60px;
+  text-shadow: 0.5px 0.5px #000;
+}
+
+body {
+  background: url("../../assets/macbook.png") no-repeat top fixed;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 769px) {
+  body {
+    background-size: auto 100%;
+  }
+}
