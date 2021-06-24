@@ -2,9 +2,11 @@ function cloneEl(HTMLtext, section) {
   let El = document.createElement("null");
   const parent = document.querySelector(section);
   El.innerHTML = HTMLtext;
-  //El = El.firstElementChild;
-
-  parent.appendChild(El);
+  if (El.tagName === "null" || El.tagName === "NULL") {
+    parent.appendChild(El.firstElementChild);
+  } else {
+    parent.appendChild(El);
+  }
 }
 
 function services() {
@@ -64,22 +66,22 @@ function contact() {
 function navbar() {
   return `
   <div class="header__navbar">
-  <a href="./index.html">
-  <img src="./assets/logo-marcos.png" alt="" class="navbar__logo" />
-  </a>
-  <div class="navbar__burger">
-    <svg viewBox="0 0 100 80" width="40" height="40" fill="whitesmoke">
-      <rect width="100" height="10" rx="8"></rect>
-      <rect y="30" width="100" height="10" rx="8"></rect>
-      <rect y="60" width="100" height="10" rx="8"></rect>
-    </svg>
-  </div>
+    <a href="./index.html">
+      <img src="./assets/logo-marcos.png" alt="" class="navbar__logo" />
+    </a>
+    <div class="navbar__burger">
+      <svg viewBox="0 0 100 80" width="40" height="40" fill="whitesmoke">
+        <rect width="100" height="10" rx="8"></rect>
+        <rect y="30" width="100" height="10" rx="8"></rect>
+        <rect y="60" width="100" height="10" rx="8"></rect>
+      </svg>
+    </div>
 
-  <nav class="navbar__links">
-    <a href="./portfolio.html" class="navbar__links-item">Portafolio</a>
-    <a href="./services.html" class="navbar__links-item">Servicios</a>
-    <a href="./contact.html" class="navbar__links-item">Contacto</a>
-  </nav>
+    <nav class="navbar__links">
+      <a href="./portfolio.html" class="navbar__links-item">Portafolio</a>
+      <a href="./services.html" class="navbar__links-item">Servicios</a>
+      <a href="./contact.html" class="navbar__links-item">Contacto</a>
+    </nav>
   </div>
   `;
 }
@@ -115,5 +117,43 @@ function burgerDisplay() {
   ventanaEl.addEventListener("click", () => {
     document.querySelector(".header__navbar").style = "";
     ventanaEl.style.display = "";
+  });
+}
+
+function sendMail() {
+  const formEl = document.querySelector(".contact__form");
+  formEl.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const value = Object.fromEntries(data.entries());
+    value.time = new Date(event.timeStamp * 1000);
+    const mensaje = `
+    Enviado por: ${value.name};
+    con fecha: ${value.time};
+    mensaje:
+    ${value.message};
+    responder a: ${value.email}
+    `;
+
+    fetch("https://apx-api.vercel.app/api/utils/dwf", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        to: "marcosreuquendiaz@gmail.com",
+        message: mensaje,
+      }),
+    })
+      .then((res) => {
+        alert("¡Gracias! Te responderé tan pronto como me sea posible.");
+        document.querySelector(".form__input-name").value = "";
+        document.querySelector(".form__input-email").value = "";
+        document.querySelector(".form__input-message").value = "";
+      })
+      .catch((err) => {
+        alert("¡Ouch! Parece que algo salió mal. Por favor, intentá de nuevo.");
+      });
   });
 }

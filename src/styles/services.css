@@ -23,6 +23,9 @@
   font-size: 42px;
   text-shadow: 0.5px 0.5px #000;
 }
+.header__title h2 {
+  margin: 0 auto;
+}
 
 body {
   background: url("../../assets/macbook.png") no-repeat top fixed;

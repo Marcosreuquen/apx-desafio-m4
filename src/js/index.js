@@ -44,7 +44,6 @@
         const type = item.sys.contentType.sys.id;
         if (type === "services") {
           const services = item.fields;
-          console.log(services);
 
           const container = document.querySelector(".services__container");
           const template = document.querySelector(
@@ -62,6 +61,8 @@
 
   //BURGER
   burgerDisplay();
+  //SEND MAILS
+  sendMail();
 
   //SCROLL REVEAL
   ScrollReveal({ duration: 1000, reset: false });

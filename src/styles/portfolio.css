@@ -19,6 +19,9 @@ body {
   text-shadow: 1px 1px #000;
 }
 
+.header__title h2 {
+  margin: 0 auto;
+}
 /* --- SERVICES --- */
 
 .portfolio {
