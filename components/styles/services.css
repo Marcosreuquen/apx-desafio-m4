@@ -1,4 +1,3 @@
-
 /* --- SERVICES --- */
 
 .services {
@@ -6,8 +5,7 @@
   padding: 30px 30px;
   height: auto;
   min-height: 700px;
-  color: #FAFAFA;
-
+  color: #fafafa;
 }
 .services__title {
   font-family: "Montserrat";
@@ -33,8 +31,8 @@
   text-align: center;
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
-  border-radius: 50px;
-  box-shadow: 1em 1em 1em #dbdbdb10;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #14141499;
   border: 0.02px solid #00000010;
   padding: 15px;
   margin: 20px;
