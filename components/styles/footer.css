@@ -46,6 +46,15 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+.social__item:hover {
+  cursor: pointer;
+  background-color: #4d4a6cdd;
+  border-bottom: 2px solid #fafafa70;
+  box-shadow: 5px 5px 10px #4d4a6c99;
+  border-radius: 7px;
+  transition: 0.5s;
 }
 
 .social__label {

@@ -78,7 +78,7 @@ function navbar() {
     </div>
 
     <nav class="navbar__links">
-      <a href="./portfolio.html" class="navbar__links-item">Portafolio</a>
+      <a href="./portfolio.html" class="navbar__links-item">Portfolio</a>
       <a href="./services.html" class="navbar__links-item">Servicios</a>
       <a href="./contact.html" class="navbar__links-item">Contacto</a>
     </nav>
@@ -113,6 +113,7 @@ function burgerDisplay() {
   burgerEl.addEventListener("click", () => {
     document.querySelector(".header__navbar").style = "position: initial";
     ventanaEl.style.display = "flex";
+    scroll(0, 0);
   });
   ventanaEl.addEventListener("click", () => {
     document.querySelector(".header__navbar").style = "";

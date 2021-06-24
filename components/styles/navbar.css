@@ -63,6 +63,7 @@ body {
 .navbar__links-item:hover {
   border-bottom: 2px solid #fafafa70;
   box-shadow: 5px 5px 10px #4d4a6c99;
+  transition: 0.5s;
 }
 .navbar__links-item {
   text-decoration: none;

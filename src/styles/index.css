@@ -31,7 +31,8 @@ body {
 .about-me {
   background-color: #141414;
   color: #fafafa;
-  height: 538px;
+  min-height: 538px;
+  height: fit-content;
   padding: 30px;
   display: flex;
   flex-direction: column;
